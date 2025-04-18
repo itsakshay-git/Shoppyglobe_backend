@@ -1,0 +1,149 @@
+# ShoppyGlobe Backend
+
+ShoppyGlobe is a backend e-commerce API built using Node.js, Express.js, and MongoDB. It supports product listing, user authentication, and a cart system with secure operations.
+
+---
+
+## 🧾 Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Setup](#project-setup)
+- [Development Commands](#development-commands)
+- [Production Commands](#production-commands)
+- [API Endpoints](#api-endpoints)
+- [Folder Structure](#folder-structure)
+
+---
+
+## 🚀 Features
+
+- User Authentication (Register/Login)
+- Product CRUD APIs
+- Cart Management (Add, Update, Remove Items)
+- Error Handling Middleware
+- MongoDB Integration with Compass support
+- RESTful API Structure
+
+---
+
+## 🛠 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JWT Authentication
+- dotenv for environment variables
+
+---
+
+## 🧩 Project Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/ShoppyGlobe_backend.git
+cd ShoppyGlobe_backend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/shoppyglobe
+JWT_SECRET=your_jwt_secret_here
+NODE_ENV=development
+```
+
+## Environment Variables
+
+This project uses environment variables to configure sensitive information.
+
+1. Create a `.env` file in the root directory of the project.
+2. Copy the contents from `.env.example` and fill in the values.
+
+### 4. Set up MongoDB Locally
+
+- Download MongoDB and install MongoDB Compass: [https://www.mongodb.com/products/self-managed/community-edition](https://www.mongodb.com/products/self-managed/community-edition)
+- Start MongoDB Server
+- Open MongoDB Compass
+- Connect using:
+
+```
+mongodb://localhost:27017/shoppyglobe
+```
+
+- Create a database called `shoppyglobe` manually or it will be auto-created on app start.
+
+---
+
+## Development Commands
+
+```bash
+npm run dev     # Start server with nodemon for auto-reloading
+```
+
+### Optional: Seed Products Data
+
+```bash
+npm run import:products  # Runs importProducts.js to populate products collection
+```
+
+---
+
+## Production Commands
+
+```bash
+npm start       # Runs app in production mode (without nodemon)
+```
+
+---
+
+## 🔌 API Endpoints
+
+### Auth
+
+- `POST /register` – Register new user
+- `POST /login` – Login user and return token
+
+### Products
+
+- `GET /products` – Get all products
+- `GET /products/:id` – Get product by ID
+
+### Cart _(Protected Routes)_
+
+- `GET /cart` – Get current user cart
+- `POST /cart` – Add product to cart
+- `PUT /cart/:productId` – Update cart item
+- `DELETE /cart/:productId` – Remove item from cart
+
+---
+
+## 📁 Folder Structure
+
+```
+ShoppyGlobe_backend/
+├── config/           # DB configuration
+├── controllers/      # Route controllers
+├── middleware/       # Custom middleware (auth, error handling)
+├── models/           # Mongoose models
+├── routes/           # Express route handlers
+├── data/             # Dummy data for seeding
+├── .env              # Environment variables
+├── server.js         # Entry point
+```
+
+### NOTE: Seed Products Data into DataBase before Calling APIs
+
+```bash
+npm run import:products  # Runs importProducts.js to populate products collection
+```
