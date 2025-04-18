@@ -4,6 +4,20 @@ ShoppyGlobe is a backend e-commerce API built using Node.js, Express.js, and Mon
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [ShoppyGlobe API Live on Render](https://shoppyglobe-backend.onrender.com)
+
+You can test endpoints like `/products`, `/register`, `/login`, and `/cart` from this live API deployment.
+
+---
+
+## 🚀 Live Demo
+
+🔗 [ShoppyGlobe API Live on Render](https://shoppyglobe-backend.onrender.com)
+
+You can test endpoints like `/products`, `/register`, `/login`, and `/cart` from this live API deployment.
+
 ## 🧾 Table of Contents
 
 - [Features](#features)
@@ -147,3 +161,61 @@ ShoppyGlobe_backend/
 ```bash
 npm run import:products  # Runs importProducts.js to populate products collection
 ```
+
+---
+
+## 📬 Sample Request Body
+
+Below are some example JSON payloads for making requests to various endpoints:
+
+### 🔐 Register User
+
+`POST /register`
+
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+
+### 🔐 Login User
+
+`POST /login`
+
+```json
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+
+### 🛒 Add Product to Cart
+
+`POST /cart`
+(Requires Bearer Token)
+
+```json
+{
+  "productId": "YOUR_PRODUCT_ID_HERE",
+  "quantity": 2
+}
+```
+
+### 🛒 Update Cart Item Quantity
+
+`PUT /cart/:productId`
+(Requires Bearer Token)
+
+```json
+{
+  "quantity": 3
+}
+```
+
+### ❌ Remove Product from Cart
+
+`DELETE /cart/:productId`
+(Requires Bearer Token)
+(No body required)
