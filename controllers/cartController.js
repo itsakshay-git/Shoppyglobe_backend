@@ -42,6 +42,7 @@ export const addToCart = async (req, res, next) => {
   try {
     const { productId, quantity } = req.body;
 
+    if (!productId) return res.status(400).json({ message: 'ProductId not provided' });
     const product = await Product.findById(productId);
     if (!product) return res.status(404).json({ message: 'Product not found' });
 
