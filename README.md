@@ -12,12 +12,6 @@ You can test endpoints like `/products`, `/register`, `/login`, and `/cart` from
 
 ---
 
-## 🚀 Live Demo
-
-🔗 [ShoppyGlobe API Live on Render](https://shoppyglobe-backend.onrender.com)
-
-You can test endpoints like `/products`, `/register`, `/login`, and `/cart` from this live API deployment.
-
 ## 🧾 Table of Contents
 
 - [Features](#features)
