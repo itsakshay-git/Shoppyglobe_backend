@@ -6,7 +6,7 @@ ShoppyGlobe is a backend e-commerce API built using Node.js, Express.js, and Mon
 
 ## github repository
 
-[ShoppyGlobe github repository](https://github.com/itsakshay-git/Shoppyglobe_backend)
+🔗 [ShoppyGlobe github repository](https://github.com/itsakshay-git/Shoppyglobe_backend)
 
 ---
 
